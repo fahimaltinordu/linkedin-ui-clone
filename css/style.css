@@ -17,40 +17,43 @@ body {
 
 header {
   background-color: #fff;
-  height: 54px; }
+  height: 52px; }
   header nav {
-    max-width: 1140px;
+    max-width: 1200px;
     height: inherit;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 30px;
+    padding: 0 36px;
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media screen and (min-width: 1400px) {
+      header nav {
+        max-width: 1400px; } }
     header nav .logo {
-      margin-right: 10px; }
+      margin-right: 8px; }
       header nav .logo a {
         display: flex; }
         header nav .logo a svg path {
           fill: #0a66c2; }
     header nav .search {
-      flex: 1;
+      flex: 1.4;
       height: 34px;
       position: relative; }
       @media screen and (max-width: 992px) {
         header nav .search {
           display: none; } }
       header nav .search input {
-        width: 80%;
+        width: 72%;
         height: inherit;
-        background-color: #dce6f1;
+        background-color: #eef3f8;
         color: rgba(0, 0, 0, 0.6);
         font-size: 16px;
         border: none;
         box-shadow: none;
         border-radius: 4px;
         padding: 0 8px 0 40px;
-        transition: width 83ms ease; }
+        transition: width 0.5s ease, padding 0.1s ease; }
         header nav .search input::-moz-placeholder {
           font-size: 14px;
           color: rgba(0, 0, 0, 0.6); }
@@ -61,8 +64,9 @@ header {
           font-size: 14px;
           color: rgba(0, 0, 0, 0.6); }
         header nav .search input:focus {
-          width: 100%;
-          box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2); }
+          width: 95%;
+          padding: 0 8px 0 60px;
+          border: 1px solid #dce6f1; }
           header nav .search input:focus::-moz-placeholder {
             font-size: 16px; }
           header nav .search input:focus:-ms-input-placeholder {
@@ -73,10 +77,12 @@ header {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 10px; }
+        left: 15px; }
     header nav .menu {
-      flex: 1.5;
-      height: 100%; }
+      min-width: 200px;
+      flex: 2;
+      height: 100%;
+      margin-left: 10px; }
       header nav .menu ul {
         height: 100%;
         display: flex;
@@ -95,7 +101,10 @@ header {
             justify-content: center; }
             header nav .menu ul li a span {
               font-size: 12px;
-              color: rgba(0, 0, 0, 0.6); }
+              color: rgba(0, 0, 0, 0.6);
+              display: flex;
+              justify-content: space-around;
+              align-items: center; }
               @media screen and (max-width: 860px) {
                 header nav .menu ul li a span {
                   display: none; } }
@@ -112,31 +121,35 @@ header {
           @media screen and (max-width: 490px) {
             header nav .menu ul li:nth-of-type(6), header nav .menu ul li:nth-of-type(7) {
               display: none; } }
-          @media screen and (max-width: 567px) {
+          @media screen and (max-width: 600px) {
             header nav .menu ul li:nth-of-type(8) {
               display: none; } }
           header nav .menu ul li:nth-of-type(9) {
             display: none; }
-            @media screen and (max-width: 567px) {
+            @media screen and (max-width: 600px) {
               header nav .menu ul li:nth-of-type(9) {
-                display: block; } }
+                display: flex; } }
           header nav .menu ul li:nth-of-type(1) {
             display: none; }
             @media screen and (max-width: 992px) {
               header nav .menu ul li:nth-of-type(1) {
-                display: block; } }
+                display: flex; } }
           header nav .menu ul li.active {
             border-bottom: 2px solid black; }
             header nav .menu ul li.active a svg {
               fill: black; }
             header nav .menu ul li.active a span {
               color: black; }
+          header nav .menu ul li:hover a svg {
+            fill: black; }
+          header nav .menu ul li:hover a span {
+            color: black; }
     header nav .banner {
       max-width: 125px;
       text-align: center; }
       header nav .banner a {
         font-size: 12px;
         color: #915907; }
-      @media screen and (max-width: 567px) {
+      @media screen and (max-width: 600px) {
         header nav .banner {
           display: none; } }
