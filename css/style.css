@@ -29,7 +29,7 @@ header {
     justify-content: space-between; }
     @media screen and (min-width: 1400px) {
       header nav {
-        max-width: 1400px; } }
+        max-width: 1600px; } }
     header nav .logo {
       margin-right: 8px; }
       header nav .logo a {
@@ -53,7 +53,7 @@ header {
         box-shadow: none;
         border-radius: 4px;
         padding: 0 8px 0 40px;
-        transition: width 0.5s ease, padding 0.1s ease; }
+        transition: width 0.3s ease, padding 0.1s ease; }
         header nav .search input::-moz-placeholder {
           font-size: 14px;
           color: rgba(0, 0, 0, 0.6); }
