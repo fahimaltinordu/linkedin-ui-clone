@@ -19,7 +19,8 @@ header {
   background-color: #fff;
   height: 52px;
   position: sticky;
-  top: 0; }
+  top: 0;
+  z-index: 9999; }
   header nav {
     max-width: 1200px;
     height: inherit;
@@ -156,12 +157,12 @@ header {
         header nav .banner {
           display: none; } }
 
-.card, main .container .leftbar .content, main .container .center .content, main .container .rightbar .content {
+.card, main .container .leftbar .profile, main .container .leftbar .stats, main .container .center .content, main .container .rightbar .content {
   background-color: #fff;
   border-radius: 5px;
-  padding: 12px; }
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.08); }
 
-.stickycards, main .container .leftbar .content, main .container .rightbar .content {
+.stickycards {
   position: sticky;
   top: 62px; }
 
@@ -173,41 +174,174 @@ main {
     margin-right: auto;
     padding: 0 36px;
     display: grid;
-    grid-template-columns: 1fr 2.4fr 1.4fr;
-    grid-gap: 20px; }
+    grid-template-columns: 225px 12fr minmax(315px, 7fr);
+    grid-gap: 2.4rem; }
     @media screen and (min-width: 1400px) {
       main .container {
         max-width: 1600px; } }
+    @media screen and (max-width: 1100px) {
+      main .container {
+        grid-template-columns: 225px 1fr; } }
     @media screen and (max-width: 992px) {
       main .container {
-        grid-template-columns: 2.4fr 1.4fr; } }
+        grid-template-columns: 225px 1fr; } }
     @media screen and (max-width: 768px) {
       main .container {
         grid-template-columns: 1fr; } }
+    @media screen and (max-width: 1100px) {
+      main .container .leftbar {
+        grid-column: 1/2; } }
     @media screen and (max-width: 992px) {
       main .container .leftbar {
-        grid-column: 2/3;
-        grid-row: 1/2; } }
+        grid-column: 1/2; } }
     @media screen and (max-width: 768px) {
       main .container .leftbar {
-        grid-column: 1/3;
-        grid-row: 1/2; } }
+        grid-column: 1/2; } }
+    main .container .leftbar .profile .header {
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      main .container .leftbar .profile .header > img {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px; }
+      main .container .leftbar .profile .header a {
+        text-align: center; }
+        main .container .leftbar .profile .header a h4 {
+          font-size: 15px;
+          color: rgba(0, 0, 0, 0.9);
+          margin-bottom: 5px; }
+        main .container .leftbar .profile .header a:nth-of-type(1) {
+          display: block;
+          margin-bottom: 40px; }
+          main .container .leftbar .profile .header a:nth-of-type(1) img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translatex(-50%);
+            border: 2px solid white; }
+        main .container .leftbar .profile .header a:hover {
+          text-decoration: underline; }
+      main .container .leftbar .profile .header p {
+        font-size: 12px;
+        opacity: 0.7;
+        padding: 0 12px;
+        text-align: center; }
+    main .container .leftbar .profile .content {
+      margin-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      main .container .leftbar .profile .content a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 12px; }
+        main .container .leftbar .profile .content a span {
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.9); }
+          main .container .leftbar .profile .content a span:nth-of-type(2) {
+            color: #0a66c2;
+            font-weight: 700; }
+        main .container .leftbar .profile .content a:hover {
+          background-color: lightgrey; }
+        main .container .leftbar .profile .content a:nth-of-type(2):hover {
+          text-decoration: underline; }
+    main .container .leftbar .profile .footer {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      main .container .leftbar .profile .footer a {
+        padding: 0 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; }
+        main .container .leftbar .profile .footer a span {
+          font-size: 12px; }
+          main .container .leftbar .profile .footer a span:nth-of-type(1) {
+            color: black;
+            opacity: 0.6; }
+          main .container .leftbar .profile .footer a span:nth-of-type(2) {
+            color: black;
+            opacity: 0.8; }
+      main .container .leftbar .profile .footer:hover {
+        background-color: lightgrey; }
+    main .container .leftbar .profile .footer-1 {
+      padding: 10px 0;
+      cursor: pointer; }
+      main .container .leftbar .profile .footer-1 a {
+        padding: 0 12px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+        main .container .leftbar .profile .footer-1 a svg {
+          fill: rgba(0, 0, 0, 0.5);
+          margin-right: 5px; }
+        main .container .leftbar .profile .footer-1 a span {
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.7);
+          font-weight: 400; }
+      main .container .leftbar .profile .footer-1:hover {
+        background-color: lightgrey; }
+    main .container .leftbar .stats {
+      margin-top: 20px;
+      padding: 10px 0 0 0; }
+      main .container .leftbar .stats .stats-top {
+        padding: 0 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        main .container .leftbar .stats .stats-top a {
+          display: block;
+          font-size: 12px;
+          color: #0a66c2;
+          font-weight: 600;
+          margin-bottom: 8px; }
+          main .container .leftbar .stats .stats-top a:hover {
+            text-decoration: underline; }
+          main .container .leftbar .stats .stats-top a:nth-of-type(2) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; }
+            main .container .leftbar .stats .stats-top a:nth-of-type(2) span:nth-of-type(2) {
+              width: 25px;
+              height: 25px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%; }
+              main .container .leftbar .stats .stats-top a:nth-of-type(2) span:nth-of-type(2) svg {
+                fill: rgba(0, 0, 0, 0.6); }
+              main .container .leftbar .stats .stats-top a:nth-of-type(2) span:nth-of-type(2):hover {
+                background-color: lightgrey; }
+                main .container .leftbar .stats .stats-top a:nth-of-type(2) span:nth-of-type(2):hover svg {
+                  fill: black; }
+      main .container .leftbar .stats .stats-bottom {
+        padding: 10px 12px;
+        cursor: pointer;
+        text-align: center; }
+        main .container .leftbar .stats .stats-bottom a {
+          font-weight: 600;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.6); }
+        main .container .leftbar .stats .stats-bottom:hover {
+          background-color: lightgrey; }
+    @media screen and (max-width: 1100px) {
+      main .container .center {
+        grid-column: 2/4; } }
     @media screen and (max-width: 992px) {
       main .container .center {
-        grid-column: 1/2;
-        grid-row: 1/2; } }
+        grid-column: 2/4; } }
     @media screen and (max-width: 768px) {
       main .container .center {
-        grid-column: 1/3;
-        grid-row: 2/3; } }
+        grid-column: 1/2; } }
     main .container .center .content {
-      padding: 24px;
-      height: 500px; }
+      padding: 24px; }
+    @media screen and (max-width: 1100px) {
+      main .container .rightbar {
+        grid-column: 1/2; } }
     @media screen and (max-width: 992px) {
       main .container .rightbar {
-        grid-column: 1/2;
-        grid-row: 2/3; } }
+        grid-column: 1/2; } }
     @media screen and (max-width: 768px) {
       main .container .rightbar {
-        grid-column: 1/3;
-        grid-row: 3/4; } }
+        grid-column: 1/2; } }
