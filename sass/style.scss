@@ -240,15 +240,15 @@
 
          .profile {
             @extend .card;
-            // @extend .stickycards;
             .header {
                position: relative;
                padding-bottom:10px;
                border-bottom:1px solid rgba(0,0,0,0.1);
-               >img {
-                  border-top-left-radius: 5px;
-                  border-top-right-radius: 5px;
-               }
+               background-image: url("https://static-exp1.licdn.com/sc/h/9e0ckeb27mzi70ne80f4hv7il");
+               background-repeat: no-repeat;
+               padding-top: 75px;
+               border-top-right-radius: 5px;
+               border-top-left-radius: 5px;
                a {
                   text-align: center;
                   h4 {
@@ -264,7 +264,7 @@
                         height:70px;
                         border-radius: 50%;
                         position: absolute;
-                        top:15px;
+                        top:25px;
                         left:50%;
                         transform: translatex(-50%);
                         border:2px solid white;
@@ -283,7 +283,7 @@
             }
             .content {   
                margin-top:10px;
-               padding-bottom:10px;
+               padding-bottom:12px;
                border-bottom:1px solid rgba(0,0,0,0.1);
                a {
                   display:flex;
@@ -334,7 +334,7 @@
                }
             }
             .footer-1 {
-               padding:10px 0;
+               padding:12px 0;
                cursor:pointer;
                a {
                   padding: 0 12px;
@@ -358,6 +358,7 @@
          }
          .stats {
             @extend .card;
+            @extend .stickycards;
             margin-top:20px;
             padding:10px 0 0 0;
             .stats-top {
@@ -425,8 +426,8 @@
          }
          .content {
             @extend .card;
-            padding:24px;
-            
+            padding:24px; 
+            height:1200px;           
          }
       }
       .rightbar {
@@ -441,7 +442,80 @@
          }
          .content {
             @extend .card;
-            // @extend .stickycards;
+            padding:12px;  
+            .title {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               margin-bottom: 15px;
+               h3 {
+                  font-size: 16px;
+                  font-weight: 600;
+                  color: rgba(0, 0, 0, 0.8);
+               }
+               a {
+                  display: flex;
+                  svg {
+                     fill:rgba(0, 0, 0, 0.6);
+                     &:hover {
+                        fill:rgba(0, 0, 0, 0.9);
+                     }
+                  }
+               }
+            } 
+            .follow {
+               display: flex;
+               align-items: center;
+               margin-bottom:20px;
+               .inner-left {
+                  align-self: flex-start;
+                  margin-right:10px;
+                  a {
+                     img {
+                        width:48px;
+                        height: 48px;
+                        border-radius: 50%;
+                     }
+                  }
+               }
+               .inner-right {
+                  flex:1;
+                  a {
+                     display: block;
+                     h3 {
+                        font-size: 14px;
+                        color:rgba(0, 0, 0, 0.9);
+                     }
+                     p {
+                        font-size: 12px;
+                        color:rgba(0, 0, 0, 0.6);
+                     }
+                     &:nth-of-type(2) {
+                        margin-top:12px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        display:flex;
+                        align-items: center;
+                        justify-content: flex-start; 
+                        padding:5px 10px;
+                        border:1px solid rgba(0, 0, 0, 0.6);
+                        width:100px;
+                        height:30px;
+                        border-radius: 30px;
+                        svg {
+                           fill:rgba(0, 0, 0, 0.65);
+                           margin-right:5px;
+                        }
+                        span {
+                           color:rgba(0, 0, 0, 0.5);
+                        } 
+                        &:hover {
+                           background-color: lightgrey;
+                        } 
+                     }
+                  }
+               }
+            }
          }
       }
     }
