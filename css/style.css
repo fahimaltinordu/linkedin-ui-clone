@@ -157,7 +157,7 @@ header {
         header nav .banner {
           display: none; } }
 
-.card, main .container .leftbar .profile, main .container .leftbar .stats, main .container .center .content, main .container .rightbar .content, main .container .rightbar .banner {
+.card, main .container .leftbar .profile, main .container .leftbar .stats, main .container .center .content, main .container .center .linkedinposts, main .container .rightbar .content, main .container .rightbar .banner {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.08); }
@@ -337,8 +337,110 @@ main {
       main .container .center {
         grid-column: 1/2; } }
     main .container .center .content {
-      padding: 24px;
-      height: 1500px; }
+      padding: 24px 24px 5px 24px; }
+      main .container .center .content .post .post-top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px; }
+        main .container .center .content .post .post-top img {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          margin-right: 12px; }
+        main .container .center .content .post .post-top input {
+          flex: 1;
+          height: 48px;
+          border-radius: 48px;
+          padding-left: 20px;
+          border: 1px solid rgba(0, 0, 0, 0.1); }
+          main .container .center .content .post .post-top input::-moz-placeholder {
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.4); }
+          main .container .center .content .post .post-top input:-ms-input-placeholder {
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.4); }
+          main .container .center .content .post .post-top input::placeholder {
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.4); }
+      main .container .center .content .post .post-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-around; }
+        main .container .center .content .post .post-bottom a {
+          display: flex;
+          align-items: center;
+          height: 48px;
+          padding: 0 7px;
+          border-radius: 4px; }
+          main .container .center .content .post .post-bottom a:hover {
+            background-color: #e9e9e9; }
+          main .container .center .content .post .post-bottom a span {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 8px; }
+          main .container .center .content .post .post-bottom a:nth-of-type(1) svg {
+            fill: #70b5f9; }
+          main .container .center .content .post .post-bottom a:nth-of-type(2) svg {
+            fill: #7fc15e; }
+          main .container .center .content .post .post-bottom a:nth-of-type(3) svg {
+            fill: #eaae56; }
+          main .container .center .content .post .post-bottom a:nth-of-type(4) svg {
+            fill: #f5987e; }
+    main .container .center .line {
+      margin-top: 12px;
+      padding: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      main .container .center .line > hr {
+        flex: 1;
+        margin-right: 8px;
+        display: block;
+        height: 1px;
+        border: 0;
+        background-color: rgba(0, 0, 0, 0.15); }
+      main .container .center .line a {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 12px;
+        font-weight: 400; }
+        main .container .center .line a span {
+          color: black;
+          font-weight: 600; }
+    main .container .center .linkedinposts {
+      margin-top: 12px;
+      padding: 12px; }
+      main .container .center .linkedinposts .post-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: 8px; }
+        main .container .center .linkedinposts .post-head span {
+          flex: 1;
+          margin-left: 4px;
+          font-size: 12px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.6); }
+        main .container .center .linkedinposts .post-head a:nth-of-type(1) {
+          font-weight: 600;
+          font-size: 13px;
+          color: black; }
+          main .container .center .linkedinposts .post-head a:nth-of-type(1):hover {
+            color: #0a66c2;
+            text-decoration: underline; }
+        main .container .center .linkedinposts .post-head a:nth-of-type(2) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+          padding: 5px; }
+          main .container .center .linkedinposts .post-head a:nth-of-type(2):hover {
+            background-color: lightgrey; }
+          main .container .center .linkedinposts .post-head a:nth-of-type(2) svg {
+            fill: #666666; }
     @media screen and (max-width: 1100px) {
       main .container .rightbar {
         grid-column: 1/2; } }
@@ -460,9 +562,9 @@ main {
             height: 70px; }
       main .container .rightbar .banner > p {
         margin-top: 8px;
-        color: rgba(0, 0, 0, 0.7);
+        color: rgba(0, 0, 0, 0.65);
         font-weight: 400;
-        font-size: 15px;
+        font-size: 13px;
         line-height: 20px; }
       main .container .rightbar .banner > a {
         display: inline-flex;
@@ -482,23 +584,24 @@ main {
       main .container .rightbar .footer .links ul {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px 15px;
         justify-content: center; }
-        main .container .rightbar .footer .links ul li a {
-          display: flex;
-          align-items: center;
-          color: #56687a;
-          font-size: 12px;
-          font-weight: 400; }
-          main .container .rightbar .footer .links ul li a:hover {
-            text-decoration: underline;
-            color: #0a66c2; }
-          main .container .rightbar .footer .links ul li a svg {
-            margin-left: 5px;
-            width: 10px; }
+        main .container .rightbar .footer .links ul li {
+          margin: .3rem .6rem; }
+          main .container .rightbar .footer .links ul li a {
+            display: flex;
+            align-items: center;
+            color: #56687a;
+            font-size: 12px;
+            font-weight: 400; }
+            main .container .rightbar .footer .links ul li a:hover {
+              text-decoration: underline;
+              color: #0a66c2; }
+            main .container .rightbar .footer .links ul li a svg {
+              margin-left: 5px;
+              width: 10px; }
       main .container .rightbar .footer .copyright {
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         justify-content: center;
         margin-top: 10px; }
         main .container .rightbar .footer .copyright svg {
