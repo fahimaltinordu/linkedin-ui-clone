@@ -441,6 +441,63 @@ main {
             background-color: lightgrey; }
           main .container .center .linkedinposts .post-head a:nth-of-type(2) svg {
             fill: #666666; }
+      main .container .center .linkedinposts .user {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        main .container .center .linkedinposts .user .user-img {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          main .container .center .linkedinposts .user .user-img img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 8px; }
+        main .container .center .linkedinposts .user .user-info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start; }
+          main .container .center .linkedinposts .user .user-info h3 {
+            color: rgba(0, 0, 0, 0.9);
+            font-size: 14px;
+            font-weight: 600; }
+            main .container .center .linkedinposts .user .user-info h3:hover {
+              color: #0a66c2;
+              text-decoration: underline; }
+            main .container .center .linkedinposts .user .user-info h3 span {
+              font-weight: 400;
+              color: rgba(0, 0, 0, 0.6); }
+          main .container .center .linkedinposts .user .user-info > span {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.6); }
+            main .container .center .linkedinposts .user .user-info > span:nth-of-type(2) {
+              display: flex;
+              align-items: center; }
+              main .container .center .linkedinposts .user .user-info > span:nth-of-type(2) span {
+                margin-right: 4px; }
+      main .container .center .linkedinposts .post-content {
+        margin-top: 12px; }
+        main .container .center .linkedinposts .post-content p.realpost {
+          color: rgba(0, 0, 0, 0.9);
+          line-height: 20px;
+          font-size: 14px;
+          font-weight: 400; }
+        main .container .center .linkedinposts .post-content .effecticons {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+          main .container .center .linkedinposts .post-content .effecticons span {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.6); }
+          main .container .center .linkedinposts .post-content .effecticons a {
+            display: flex; }
     @media screen and (max-width: 1100px) {
       main .container .rightbar {
         grid-column: 1/2; } }
