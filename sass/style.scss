@@ -106,6 +106,7 @@
                    flex-direction: column;
                    align-items: center;
                    justify-content: center;
+                   position: relative;
                    span{
                      font-size: 12px;
                      color:rgba(0,0,0,0.6);
@@ -114,6 +115,17 @@
                      align-items: center;
                      @media screen and (max-width:860px) {
                         display:none;
+                     }
+                     &.notifications {
+                        position: absolute;
+                        top:0;
+                        right:0;
+                        background-color: #cc1016;
+                        color:white;
+                        font-weight: 700;
+                        width:16px;
+                        height:16px;
+                        border-radius: 50%;
                      }
                    }
                    svg {
@@ -169,7 +181,7 @@
                      svg {
                         fill:rgba(0,0,0,1);
                      }
-                     span {
+                     span:not(.notifications) {
                        color:rgba(0,0,0,1);
                      }
                   }

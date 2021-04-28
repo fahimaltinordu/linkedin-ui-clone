@@ -101,7 +101,8 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; }
+            justify-content: center;
+            position: relative; }
             header nav .menu ul li a span {
               font-size: 12px;
               color: rgba(0, 0, 0, 0.6);
@@ -111,6 +112,16 @@ header {
               @media screen and (max-width: 860px) {
                 header nav .menu ul li a span {
                   display: none; } }
+              header nav .menu ul li a span.notifications {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #cc1016;
+                color: white;
+                font-weight: 700;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%; }
             header nav .menu ul li a svg {
               fill: rgba(0, 0, 0, 0.6); }
             header nav .menu ul li a img {
@@ -145,7 +156,7 @@ header {
               color: black; }
           header nav .menu ul li:hover a svg {
             fill: black; }
-          header nav .menu ul li:hover a span {
+          header nav .menu ul li:hover a span:not(.notifications) {
             color: black; }
     header nav .banner {
       max-width: 125px;
