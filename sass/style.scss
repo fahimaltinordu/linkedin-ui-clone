@@ -217,6 +217,7 @@
 
  main {
     margin-top:49px;
+    margin-bottom:49px;
     .container {
       max-width:1200px;
       margin-left:auto;
@@ -533,7 +534,7 @@
          .linkedinposts {
             @extend .card;
             margin-top:12px;
-            padding:12px; 
+            padding:5px 12px 0; 
             .post-head {
                display: flex;
                align-items: center;
@@ -629,6 +630,11 @@
                   line-height:20px;
                   font-size: 14px;
                   font-weight: 400;
+                  padding-right:10px;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;  
+                  overflow: hidden;
                }
                .effecticons {
                   display: flex;
@@ -644,6 +650,54 @@
                   a {
                      display: flex;
                   }
+               }
+            }
+            .post-button {
+               display: flex;
+               align-items: center;
+               justify-content: flex-start;
+               margin-top:5px;
+               a {
+                  display: flex;
+                  align-items: center;
+                  padding: 10px 5px;
+                  border-radius: 5px;
+                  margin-bottom: 5px;
+                  &.liked {
+                     svg {
+                        fill:rgb(20, 133, 189);
+                     }
+                     span {
+                        color:rgb(20, 133, 189);
+                     }
+                  }
+                  &:hover {
+                     background-color: lightgrey;
+                  }
+                  &:not(:last-child) {
+                     margin-right:15px;
+                     svg {
+                        margin-right:5px;
+                     }
+                  }
+                  svg {
+                     fill:rgb(102, 102, 102);
+                  }
+                  span {
+                     color:rgb(102, 102, 102);
+                     font-size: 14px;
+                     font-weight: 600;
+                  }
+               }
+            }
+            .post-comment {
+               background-color: rgb(242, 242, 242);
+               margin: 0 -12px;
+               padding: 12px;
+               p {
+                  color: rgba(0, 0, 0, 0.9);
+                  font-size: 12px;
+                  font-weight: 400;
                }
             }
          }    

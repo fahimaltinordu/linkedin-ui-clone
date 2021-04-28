@@ -178,7 +178,8 @@ header {
   top: 62px; }
 
 main {
-  margin-top: 49px; }
+  margin-top: 49px;
+  margin-bottom: 49px; }
   main .container {
     max-width: 1200px;
     margin-left: auto;
@@ -420,7 +421,7 @@ main {
           font-weight: 600; }
     main .container .center .linkedinposts {
       margin-top: 12px;
-      padding: 12px; }
+      padding: 5px 12px 0; }
       main .container .center .linkedinposts .post-head {
         display: flex;
         align-items: center;
@@ -496,7 +497,12 @@ main {
           color: rgba(0, 0, 0, 0.9);
           line-height: 20px;
           font-size: 14px;
-          font-weight: 400; }
+          font-weight: 400;
+          padding-right: 10px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden; }
         main .container .center .linkedinposts .post-content .effecticons {
           display: flex;
           align-items: center;
@@ -509,6 +515,41 @@ main {
             color: rgba(0, 0, 0, 0.6); }
           main .container .center .linkedinposts .post-content .effecticons a {
             display: flex; }
+      main .container .center .linkedinposts .post-button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 5px; }
+        main .container .center .linkedinposts .post-button a {
+          display: flex;
+          align-items: center;
+          padding: 10px 5px;
+          border-radius: 5px;
+          margin-bottom: 5px; }
+          main .container .center .linkedinposts .post-button a.liked svg {
+            fill: #1485bd; }
+          main .container .center .linkedinposts .post-button a.liked span {
+            color: #1485bd; }
+          main .container .center .linkedinposts .post-button a:hover {
+            background-color: lightgrey; }
+          main .container .center .linkedinposts .post-button a:not(:last-child) {
+            margin-right: 15px; }
+            main .container .center .linkedinposts .post-button a:not(:last-child) svg {
+              margin-right: 5px; }
+          main .container .center .linkedinposts .post-button a svg {
+            fill: #666666; }
+          main .container .center .linkedinposts .post-button a span {
+            color: #666666;
+            font-size: 14px;
+            font-weight: 600; }
+      main .container .center .linkedinposts .post-comment {
+        background-color: #f2f2f2;
+        margin: 0 -12px;
+        padding: 12px; }
+        main .container .center .linkedinposts .post-comment p {
+          color: rgba(0, 0, 0, 0.9);
+          font-size: 12px;
+          font-weight: 400; }
     @media screen and (max-width: 1100px) {
       main .container .rightbar {
         grid-column: 1/2; } }
