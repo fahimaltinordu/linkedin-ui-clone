@@ -103,27 +103,37 @@ header {
             align-items: center;
             justify-content: center;
             position: relative; }
-            header nav .menu ul li a span {
+            header nav .menu ul li a span:first-child {
+              display: flex; }
+            header nav .menu ul li a span.title {
               font-size: 12px;
               color: rgba(0, 0, 0, 0.6);
               display: flex;
               justify-content: space-around;
               align-items: center; }
               @media screen and (max-width: 860px) {
-                header nav .menu ul li a span {
+                header nav .menu ul li a span.title {
                   display: none; } }
-              header nav .menu ul li a span.notifications {
+            header nav .menu ul li a span svg {
+              fill: rgba(0, 0, 0, 0.6); }
+            header nav .menu ul li a span.notify {
+              display: flex; }
+              header nav .menu ul li a span.notify::before {
+                content: '6';
                 position: absolute;
-                top: 0;
-                right: 0;
+                top: -3px;
+                right: -1px;
                 background-color: #cc1016;
                 color: white;
                 font-weight: 700;
+                font-size: 12px;
                 width: 16px;
                 height: 16px;
-                border-radius: 50%; }
-            header nav .menu ul li a svg {
-              fill: rgba(0, 0, 0, 0.6); }
+                border-radius: 50%;
+                text-align: center;
+                line-height: 15px; }
+            header nav .menu ul li a span.arrow {
+              display: flex; }
             header nav .menu ul li a img {
               width: 24px;
               height: 24px;
@@ -145,6 +155,8 @@ header {
                 display: flex; } }
           header nav .menu ul li:nth-of-type(1) {
             display: none; }
+            header nav .menu ul li:nth-of-type(1) a svg {
+              fill: rgba(0, 0, 0, 0.6); }
             @media screen and (max-width: 992px) {
               header nav .menu ul li:nth-of-type(1) {
                 display: flex; } }
@@ -156,7 +168,7 @@ header {
               color: black; }
           header nav .menu ul li:hover a svg {
             fill: black; }
-          header nav .menu ul li:hover a span:not(.notifications) {
+          header nav .menu ul li:hover a span {
             color: black; }
     header nav .banner {
       max-width: 125px;
@@ -186,28 +198,34 @@ main {
     margin-right: auto;
     padding: 0 36px;
     display: grid;
-    grid-template-columns: 225px 12fr minmax(315px, 7fr);
     grid-gap: 2.4rem; }
     @media screen and (min-width: 1400px) {
       main .container {
         max-width: 1600px; } }
-    @media screen and (max-width: 1100px) {
+    @media screen and (min-width: 1100px) {
       main .container {
         grid-template-columns: 225px 1fr 315px; } }
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1100px) {
       main .container {
         grid-template-columns: 225px 1fr; } }
     @media screen and (max-width: 768px) {
       main .container {
-        grid-template-columns: 1fr; } }
+        grid-template-columns: 1fr;
+        grid-gap: 0; } }
+    @media screen and (max-width: 500px) {
+      main .container {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        padding: 0 5px; } }
     @media screen and (max-width: 1100px) {
-      main .container .leftbar {
-        grid-column: 1/2; } }
-    @media screen and (max-width: 992px) {
       main .container .leftbar {
         grid-column: 1/2; } }
     @media screen and (max-width: 768px) {
       main .container .leftbar {
+        display: none; } }
+    @media screen and (max-width: 500px) {
+      main .container .leftbar {
+        display: block;
         grid-column: 1/2; } }
     main .container .leftbar .profile .header-bg img {
       width: 100%;
@@ -344,9 +362,6 @@ main {
     @media screen and (max-width: 1100px) {
       main .container .center {
         grid-column: 2/3; } }
-    @media screen and (max-width: 992px) {
-      main .container .center {
-        grid-column: 2/4; } }
     @media screen and (max-width: 768px) {
       main .container .center {
         grid-column: 1/2; } }
@@ -554,12 +569,13 @@ main {
           font-weight: 400; }
     @media screen and (max-width: 1100px) {
       main .container .rightbar {
-        grid-column: 3/4; } }
-    @media screen and (max-width: 992px) {
-      main .container .rightbar {
         grid-column: 1/2; } }
     @media screen and (max-width: 768px) {
       main .container .rightbar {
+        display: none; } }
+    @media screen and (max-width: 500px) {
+      main .container .rightbar {
+        display: block;
         grid-column: 1/2; } }
     main .container .rightbar .content {
       padding: 12px; }
