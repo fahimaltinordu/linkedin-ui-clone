@@ -239,6 +239,10 @@
  main {
     margin-top:49px;
     margin-bottom:49px;
+    @media screen and (max-width:500px) {
+      margin-top:12px;
+      margin-bottom:12px;
+   }
     .container {
       max-width:1200px;
       margin-left:auto;
@@ -258,15 +262,16 @@
       }
       @media screen and (max-width:768px) {
          grid-template-columns: 1fr;
-         grid-gap: 0;
+         grid-gap: 0 15px;
       }
       @media screen and (max-width:500px) {
          grid-template-columns: 1fr;
-         grid-gap: 0;
-         padding: 0 5px;
+         grid-gap: 0 15px;
+         padding: 0 10px;
       }
       
       .leftbar {
+         margin-bottom: 15px;
          @media screen and (max-width:1100px) {
             grid-column: 1/2;
          }
@@ -460,6 +465,7 @@
       }
 
       .center {
+         margin-bottom: 15px;
          @media screen and (max-width:1100px) {
             grid-column: 2/3;
          }
@@ -500,6 +506,10 @@
                   a {
                      display:flex;
                      align-items: center;
+                     @media screen and (max-width:500px) {
+                        flex-direction: column;
+                        justify-content: center;
+                     }
                      height:48px;
                      padding:0 7px;
                      border-radius: 4px;
@@ -511,25 +521,40 @@
                         font-size: 14px;
                         font-weight: 600;
                         margin-left:8px;
+                        @media screen and (max-width:500px) {
+                           font-size: 11px;
+                        }
                      }
                      &:nth-of-type(1) {
                         svg {
                            fill:#70b5f9;
+                           @media screen and (max-width:500px) {
+                              width:16px;
+                           }
                         }
                      }
                      &:nth-of-type(2) {
                         svg {
                            fill:#7fc15e;
+                           @media screen and (max-width:500px) {
+                              width:16px;
+                           }
                         }
                      }
                      &:nth-of-type(3) {
                         svg {
                            fill:#eaae56;
+                           @media screen and (max-width:500px) {
+                              width:16px;
+                           }
                         }
                      }
                      &:nth-of-type(4) {
                         svg {
                            fill:#f5987e;
+                           @media screen and (max-width:500px) {
+                              width:16px;
+                           }
                         }
                      }
                   }
@@ -574,6 +599,9 @@
                   flex:1;
                   margin-left:4px;
                   font-size: 12px;
+                  @media screen and (max-width:500px) {
+                     font-size: 10px;
+                  }
                   font-weight: 400;
                   color: rgba(0, 0, 0, 0.6);
                }
@@ -685,10 +713,16 @@
                display: flex;
                align-items: center;
                justify-content: flex-start;
+               @media screen and (max-width:500px) {
+                  justify-content: center;
+               }
                margin-top:5px;
                a {
                   display: flex;
                   align-items: center;
+                  @media screen and (max-width:500px) {
+                     flex-direction: column;
+                  }
                   padding: 10px 5px;
                   border-radius: 5px;
                   margin-bottom: 5px;
@@ -711,11 +745,17 @@
                   }
                   svg {
                      fill:rgb(102, 102, 102);
+                     @media screen and (max-width:500px) {
+                        margin-bottom:8px;
+                     }
                   }
                   span {
                      color:rgb(102, 102, 102);
                      font-size: 14px;
                      font-weight: 600;
+                     @media screen and (max-width:500px) {
+                        font-size: 12px;
+                     }
                   }
                }
             }
@@ -737,7 +777,7 @@
             grid-column: 1/2;
          }
          @media screen and (max-width:768px) {
-            display:none;
+            grid-column: 1/2;
          }
          @media screen and (max-width:500px) {
             display:block;
